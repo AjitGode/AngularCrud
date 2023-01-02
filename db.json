@@ -1,0 +1,41 @@
+{
+  "productList": [
+    {
+      "productName": "Apple",
+      "category": "electronics",
+      "freshness": "Brand New",
+      "price": 90000,
+      "comment": "Nice product ever",
+      "date": "2022-12-30T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "Xiomi",
+      "category": "electronics",
+      "freshness": "Brand New",
+      "price": 20000,
+      "comment": "na",
+      "date": "2022-12-29T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "Iwatch",
+      "category": "electronics",
+      "freshness": "Second hand",
+      "price": 40000,
+      "comment": "na",
+      "date": "2023-01-01T18:30:00.000Z",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

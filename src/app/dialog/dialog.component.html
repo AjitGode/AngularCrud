@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>Add Product</h1>
+<div mat-dialog-content>
+ <form [formGroup]="productForm">
+    <mat-form-field appearance="outline">
+        <mat-label>Product Name</mat-label>
+        <input formControlName="productName" matInput placeholder="Enter name">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Product Category</mat-label>
+        <mat-select formControlName="category">
+          <mat-option value="fruits">Fruit</mat-option>
+          <mat-option value="vegetables">Vegetable</mat-option>
+          <mat-option value="electronics">Electronics</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input formControlName="date" matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <label for=""><h1>Product freshness</h1></label>
+    <mat-radio-group formControlName="freshness" class="example-radio-group">
+        <mat-radio-button class="example-radio-button" *ngFor="let fresh of FreshnessList" [value]="fresh">
+            {{fresh}}
+          </mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input formControlName="price" matInput type="number" placeholder="Enter Price">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Comment</mat-label>
+        <textarea formControlName="comment" matInput></textarea>
+      </mat-form-field>
+ </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addproduct()">{{actionbtn}}</button>
+
+</div>
